@@ -1,0 +1,343 @@
+*, body, html {
+    margin: 0;
+}
+
+.a {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 200vh;
+    flex-direction: column;
+}
+
+.wrapper1 {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-image: url(foto/Logo.jpg);
+  background-position: center;
+  background-size: 40%; 
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+
+.judul {
+    font-family: "Rye", serif;
+    background: linear-gradient(to right, rgb(4, 251, 4), rgb(245, 100, 129));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 100px;
+    font-size: 50px;
+}
+
+.first {
+  color: red;
+}
+
+.last {
+  color: orange;
+}
+
+.animate__animated.animate__backInLeft.judul {
+  animation-duration: 3s;
+}
+
+.navigasi {
+  width: 40%;
+  height: 100%;
+}
+
+.nav {
+    display: flex;
+    margin-left: 10%;
+    width: 30%;
+    height: 50%;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.animate__animated.animate__backInRight {
+  animation-duration: 2s;
+}
+
+.fa-house {
+  color: orange;
+  margin-right: 5px;
+}
+
+.fa-bowl-food {
+  color: orange;
+  margin-right: 5px;
+}
+
+.nav:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+  
+.menu {
+    display: none;
+    margin-left: 30px;
+    width: auto;
+    height: auto;
+}
+
+.burger {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .burger input {
+    display: none;
+  }
+  
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 45%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 90%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+  
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+    background-color: white;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 14px;
+    left: 5px;
+    background-color: white;
+  }
+
+:root {
+  --bgBox: rgb(189, 187, 187);
+}
+
+.wrapper2 {
+  width: 100%;
+  height: 100vh;
+}
+
+.pilihan {
+  margin-top: -400px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;  
+    width: 100%;  
+    padding: 0;   
+    align-items: center;
+}
+
+ul>li {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 60vh;
+    flex-grow: 1;
+    color: transparent;
+    list-style-type: none;
+    background-color: var(--bgBox);
+    color: bisque;
+    margin: 10px;
+    border-radius: 20px;
+    transition: flex-grow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    flex-grow: 1;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nugget {
+  display: flex;
+  width: 100%;
+  height: 35vh;
+  margin-top: -5px;
+  border-radius: 100%;
+}
+
+.deskripsi {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--bgBox);
+}
+
+.nameProduk {
+  color: rgb(74, 20, 20);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.harga {
+  color: black;
+}
+
+.beli {
+  width: 100%;
+  height: 7vh;
+  margin-top: 40px;
+  border-radius: 50px;
+  background-color: green;
+  cursor: pointer;
+}
+
+.beli:hover {
+  height: 8vh;
+}
+
+ul>li:hover {
+  flex-grow: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    width: 100%;
+    height: 20vh;
+    background-color: yellow;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+
+  .navigasi {
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  .nav {
+    width: 40%;
+    height: 7vh;
+    font-size: 12px;
+    border: 2px solid black;
+    margin-left: 0%;
+  }
+
+  .judul {
+    font-size: 25px;
+    background-color: green;
+    margin-left: 5%;
+  }
+
+  .wrapper1 {
+    background-size: 60%;
+  }
+
+  .pilihan {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  ul>li {
+    width: 45%;
+    height: 30%;
+  }
+
+  ul>li:hover {
+    transform: none;
+  }
+
+  .deskripsi {
+    height: 5vh;
+  }
+
+  .nugget {
+    margin-top: -40px;
+    width: 70%;
+    height: 60%;
+  }
+
+  .nameProduk {
+    font-size: 15px;
+  }
+
+  .harga {
+    font-size: 15px;
+    z-index: 100;
+
+  }
+
+  .beli {
+    width: 100%;
+    height: 5vh;
+    font-size: 100%;
+    margin-top: 5px;
+    font-size: 10px
+  }
+
+  .beli {
+    height: 5vh;
+  }
+  
+  .beli:hover {
+    height: 5vh;
+  }
+
+  ul>li {
+  }
+}
